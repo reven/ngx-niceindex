@@ -1,0 +1,141 @@
+/** ngx-niceindex
+
+    Styles based on nervo's nginx-indexer
+
+    Document styles first, icon css below
+
+    More document types defined in icons-more.css; import as needed.
+**/
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 1em 5em;
+    background-color: #f98000;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #961;
+}
+
+.container {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+h1 {
+    padding: 1em;
+    color: #666;
+    font-size: 2em;
+}
+
+hr {
+    border-top: 2px solid #e3e3e3;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+    overflow: auto;
+    margin: 1em;
+    line-height: 2em;
+}
+
+footer {
+    padding: 1em 2em;
+    float: right;
+}
+
+footer a {
+    padding: 2em;
+    text-decoration: none;
+    opacity: 0.7;
+    font-size: 80%;
+}
+
+footer a:hover {
+    opacity: 1;
+}
+
+footer > a {
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
+    background-image:url(../icons/github.png);
+}
+
+/* ***** */
+/* Icons */
+/* ***** */
+
+pre a[href]:before,
+pre a[href$="/"]:before {
+    content: "";
+    padding: 5px 25px 0 0;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+/* Default */
+
+a[href]:before {
+    background: url(../icons/default.png);
+}
+
+/* Folders */
+
+a[href$="/"]:before {
+    background: url(../icons/folder.png);
+}
+
+/* Scripts */
+a[href$=".php"]:before {
+	background: url(../icons/php.png);
+}
+
+/* Checksums */
+
+a[href$=".md5"]:before {
+    background: url(../icons/checksum.png);
+}
+
+/* Compression */
+
+a[href$=".bz2"]:before {
+   background: url(../icons/bz2.png);
+}
+
+a[href$=".gz"]:before {
+   background: url(../icons/gz.png);
+}
+
+a[href$=".tar.gz"]:before {
+   background: url(../icons/tar.gz.png);
+}
+
+/* Vagrant */
+
+a[href$=".box"]:before {
+   background: url(../icons/vagrant.png);
+}
+
+/* Debian */
+
+a[href$=".deb"]:before {
+   background: url(../icons/debian.png);
+}
+
+/* Crypt */
+
+a[href$=".gpg"]:before {
+   background: url(../icons/crypt.png);
+}
