@@ -28,3 +28,5 @@ A directory indexer for [nginx](http://nginx.org/) built to be simple, lightweig
    ```
 
 3. Restart nginx with `systemctl restart nginx` and *voilà*!
+
+![ngx-niceindex_screenshot](https://cloud.githubusercontent.com/assets/206993/22246884/df7c12e0-e1eb-11e6-96ba-8753d43583cd.png)
