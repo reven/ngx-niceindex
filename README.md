@@ -1,11 +1,15 @@
 # ngx-niceindex
 Customizable directory indexes for nginx without index modules
 
-A directory indexer for [nginx](http://nginx.org/) built to be simple, lightweight and easy to customize. It doesn't require indexer modules. It relies on xslt and css to generate clean html. It borrows heavily from [nginx-indexer](https://github.com/nervo/nginx-indexer) and [ngx-superbindex](https://github.com/gibatronic/ngx-superbindex).
+A directory indexer for [nginx](http://nginx.org/) built to be simple, lightweight and easy to customize. It doesn't require indexer modules. It relies on xslt and css to generate clean html. It borrows heavily from [nginx-indexer](https://github.com/nervo/nginx-indexer),  [ngx-superbindex](https://github.com/gibatronic/ngx-superbindex) and [wilhelmy/dirlist.xslt](https://gist.github.com/wilhelmy/5a59b8eea26974a468c9)
 
 ## Requirements
 
 [nginx](http://nginx.org/) with the [xslt](http://nginx.org/en/docs/http/ngx_http_xslt_module.html) module (included by default on Ubuntu packages).
+
+## Caveats
+
+* When nginx outputs autoindex data in xml, dates are GMT. There is no easy way to convert dates to local time in xslt1 and without additional packages.
 
 ## Usage
 
@@ -19,7 +23,7 @@ A directory indexer for [nginx](http://nginx.org/) built to be simple, lightweig
        autoindex on;
        autoindex_format xml;
 
-       xslt_stylesheet /path/to/your/directory/.niceindex/niceindex.xslt;
+       xslt_stylesheet /path/to/your/directory/.niceindex/niceindex.xslt path='$uri';
    }
    ```
 
