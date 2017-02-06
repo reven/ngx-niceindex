@@ -15,7 +15,7 @@ A directory indexer for [nginx](http://nginx.org/) built to be simple, lightweig
 
 1. Clone the repository into a hidden .niceindex folder in the directory you want to list:
 
-    git clone https://github.com/reven/ngx-niceindex.git .niceindex
+    ```git clone https://github.com/reven/ngx-niceindex.git .niceindex```
 
 2. Add the following lines to the corresponding location in your `nginx.conf` file:
    ```nginx
